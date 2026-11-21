@@ -20,14 +20,12 @@ public void draw()
   for(int i =0; i<1000; i++) {
     Paxson[i].show();
   }
-  for(int i =0; i<10; i++) {
+  for(int i =0; i<Cormac.size(); i++) {
     Cormac.get(i).show();
     Cormac.get(i).move();
     float d = dist((float)Pax.getCenterX(), (float)Pax.getCenterY(), (float)Cormac.get(i).getCenterX(), (float)Cormac.get(i).getCenterY());
     if(d<10){
       Cormac.remove(i);
-      Cormac.add(new Asteroid());
-      Cormac.get(i).setRotSpeed((Math.random()*5)-2);
     }
   }
   Pax.move();
